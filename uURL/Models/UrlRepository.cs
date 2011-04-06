@@ -13,6 +13,11 @@ namespace uURL.Models {
                              where row.ShortName == shortName
                              select row.URL).FirstOrDefault();
             }
+
+            if (url != null && !url.StartsWith("http")) {
+                url = @"http://" + url;
+            }
+
             return url;
         }
 

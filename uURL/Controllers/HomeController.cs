@@ -20,7 +20,7 @@ namespace uURL.Controllers {
                 return View(shortUrl);
             }
 
-            return Redirect(@"http://" + url);
+            return Redirect(url);
         }
 
         [HttpPost]
