@@ -16,5 +16,8 @@ namespace uURL.Models {
             return url;
         }
 
+        public string GetNewId() {
+            return "abcd";
+        }
     }
 }
