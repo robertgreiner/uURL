@@ -5,7 +5,7 @@ using System.Web;
 
 namespace uURL.Models {
     public class ShortUrl {
-        public string ID { get; set; }
+        public string ShortName { get; set; }
         public string URL { get; set; }
     }
 }

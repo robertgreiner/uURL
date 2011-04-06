@@ -16,8 +16,18 @@ namespace uURL.Models {
             return url;
         }
 
+        public void SaveUrl(ShortUrl shortUrl) {
+            using (var ctx = new UrlDataDataContext()) {
+                uURL url = new uURL();
+                url.ShortName = shortUrl.ShortName;
+                url.URL = shortUrl.URL;
+                ctx.uURLs.InsertOnSubmit(url);
+                ctx.SubmitChanges();
+            }
+        }
+
         //TODO Use Base16 for now, find a better way to do this later.
-        public string GetNewId() {
+        public string GetNewShortName() {
             string shortName = string.Empty;
             using (var ctx = new UrlDataDataContext()) {
                 var query = (from row in ctx.uURLs

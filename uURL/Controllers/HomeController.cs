@@ -13,7 +13,7 @@ namespace uURL.Controllers {
             string url = repo.GetUrl(id);
 
             ShortUrl shortUrl = new ShortUrl();
-            shortUrl.ID = string.Empty;
+            shortUrl.ShortName = string.Empty;
             shortUrl.URL = @"http://";
 
             if (string.IsNullOrEmpty(url)) {
@@ -29,8 +29,10 @@ namespace uURL.Controllers {
             ShortUrl shortUrl = new ShortUrl();
             UrlRepository repo = new UrlRepository();
 
-            shortUrl.ID = repo.GetNewId();
+            shortUrl.ShortName = repo.GetNewShortName();
             shortUrl.URL = collection["url"];
+
+            repo.SaveUrl(shortUrl);
 
             return View(shortUrl);
         }
