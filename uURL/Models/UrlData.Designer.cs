@@ -80,7 +80,9 @@ namespace uURL.Models
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _ID;
+		private int _ID;
+		
+		private string _ShortName;
 		
 		private string _URL;
 		
@@ -88,8 +90,10 @@ namespace uURL.Models
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnIDChanging(string value);
+    partial void OnIDChanging(int value);
     partial void OnIDChanged();
+    partial void OnShortNameChanging(string value);
+    partial void OnShortNameChanged();
     partial void OnURLChanging(string value);
     partial void OnURLChanged();
     #endregion
@@ -99,8 +103,8 @@ namespace uURL.Models
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="id", Storage="_ID", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string ID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="id", Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID
 		{
 			get
 			{
@@ -115,6 +119,26 @@ namespace uURL.Models
 					this._ID = value;
 					this.SendPropertyChanged("ID");
 					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="short_name", Storage="_ShortName", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string ShortName
+		{
+			get
+			{
+				return this._ShortName;
+			}
+			set
+			{
+				if ((this._ShortName != value))
+				{
+					this.OnShortNameChanging(value);
+					this.SendPropertyChanging();
+					this._ShortName = value;
+					this.SendPropertyChanged("ShortName");
+					this.OnShortNameChanged();
 				}
 			}
 		}

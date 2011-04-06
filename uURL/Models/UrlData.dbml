@@ -2,7 +2,8 @@
   <Connection Mode="WebSettings" ConnectionString="Data Source=localhost;Initial Catalog=uURL;Persist Security Info=True;User ID=testuser" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="uURLConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.url" Member="uURLs">
     <Type Name="uURL">
-      <Column Name="id" Member="ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id" Member="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="short_name" Member="ShortName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="url" Member="URL" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
