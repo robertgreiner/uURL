@@ -12,12 +12,8 @@ namespace uURL.Controllers {
             UrlRepository repo = new UrlRepository();
             string url = repo.GetUrl(id);
 
-            ShortUrl shortUrl = new ShortUrl();
-            shortUrl.ShortName = string.Empty;
-            shortUrl.URL = @"http://";
-
             if (string.IsNullOrEmpty(url)) {
-                return View(shortUrl);
+                return View();
             }
 
             return Redirect(url);
@@ -32,6 +28,7 @@ namespace uURL.Controllers {
             shortUrl.ShortName = repo.GetNewShortName();
             shortUrl.URL = collection["url"];
 
+            //TODO check for valid URL
             repo.SaveUrl(shortUrl);
 
             return View(shortUrl);
