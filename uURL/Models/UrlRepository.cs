@@ -6,6 +6,8 @@ using System.Web;
 namespace uURL.Models {
     public class UrlRepository {
 
+        //TODO Handle empty URL
+        //TODO Handle duplicate URL
         public string GetUrl(string shortName) {
             string url = string.Empty;
             using (var ctx = new UrlDataDataContext()) {
@@ -39,7 +41,7 @@ namespace uURL.Models {
                              orderby row.ID descending
                        select row.ID).Take(1);
 
-                shortName = System.Convert.ToString(query.First() + 11111, 16);
+                shortName = System.Convert.ToString(query.FirstOrDefault() + 11111, 16);
             }
 
             return shortName;

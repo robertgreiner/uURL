@@ -76,8 +76,35 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Fonts\bookman_old_style_bold_italic.swf" />
+    <Content Include="Content\Fonts\current.swf" />
+    <Content Include="Content\Fonts\gill_sans_mt.swf" />
+    <Content Include="Content\Fonts\ipap_mincho.swf" />
+    <Content Include="Content\Fonts\nevis.swf" />
+    <Content Include="Content\Fonts\rockwell.swf" />
+    <Content Include="Content\Fonts\verdana.swf" />
+    <Content Include="Content\ie6.css" />
+    <Content Include="Content\ie7.css" />
+    <Content Include="Content\Images\background.jpg" />
+    <Content Include="Content\Images\bar.jpg" />
+    <Content Include="Content\Images\bar.png" />
+    <Content Include="Content\Images\bird.png" />
+    <Content Include="Content\Images\bottomborder.png" />
+    <Content Include="Content\Images\containerbg.png" />
+    <Content Include="Content\Images\input.png" />
+    <Content Include="Content\Images\logo.png" />
+    <Content Include="Content\Images\progressbg.png" />
+    <Content Include="Content\Images\submit.png" />
+    <Content Include="Content\Images\topborder.png" />
+    <Content Include="Content\jquery-ui-1.7.2.custom.css" />
+    <Content Include="Content\sifr.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\autopopulate.js" />
+    <Content Include="Scripts\sifr-config.js" />
+    <Content Include="Scripts\sifr.js" />
+    <Content Include="Scripts\twitter.js" />
+    <Content Include="Scripts\unitpngfix.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -124,6 +151,7 @@
       <DependentUpon>UrlData.dbml</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

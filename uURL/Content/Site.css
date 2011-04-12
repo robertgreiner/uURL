@@ -1,0 +1,79 @@
+@import url("sifr.css");
+@import url("jquery-ui-1.7.2.custom.css");
+
+/* Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0;	outline: 0;	font-size: 100%; vertical-align: baseline; background: transparent; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+:focus { outline: 0; }
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* Text */
+a:visited { color: #4b4b4a; font-weight: bold; text-decoration: none;}
+a:link { color: #4b4b4a; font-weight: bold; text-decoration: none;}
+a:hover { color: #4b4b4a; font-weight: bold; text-decoration: underline;}
+.tweet p a:visited, .tweet p a:link, .tweet p a:hover { font-weight: normal; text-decoration: none; }
+body { font-family: ‘Helvetica Neue’, Helvetica, Arial, Calibri, Frutiger, sans-serif; color: #4b4b4a; font-size: 13px; line-height: 1.6em /* 20px */; }
+p, ul, blockquote, pre, td, th, label { margin: 0; font-size: 1em; line-height: 1.6em; margin-bottom: 1.6em; }
+em { }
+strong { font-weight: bold; }
+h1, h2, h3, h4, h5 {  }
+h1 {margin-bottom: 10px; padding: 0;}
+h1 em {display: inline;}
+h2 { font-weight: bold; font-size: 1em; line-height: 1.6em; margin-bottom: 1.6em; color: #2a3436; margin: 0;}
+/* PROPER H1 
+h1 { font-size:2.92em; line-height: normal; /* Equals base line-height (1.6) divided by this font size (2.92)  margin-bottom: 0.55em; color: #603913; }*/
+
+/* Background Elements */
+body { background: url(/Content/Images/background.jpg) repeat; }
+#header { background: url(/Content/Images/bar.jpg); background-repeat: repeat-x; }
+#header_logo { background: url(/Content/Images/logo.png) top left no-repeat; }
+#top_border { background: url(/Content/Images/top_border.png) no-repeat; }
+#bottom_border { background: url(/Content/Images/bottom_border.png) no-repeat; }
+#container { background: url(/Content/Images/containerbg.png) repeat-y; }
+#progress { background: url(/Content/Images/progressbg.png) no-repeat; }
+.ui-widget-content { border: 1px solid #dfdfdf; background: #ffffff; color: #222222; }
+.ui-widget-header { border: 1px solid #9db91e; background: #a1be1f url(/Content/Images/bar.png) top left repeat-x; color: #222222; font-weight: bold; }
+.tweet, .tweet .posted { background: url(/Content/Images/tweetborder.png) left bottom repeat-x; }
+
+/* Layout Elements */
+.clear { width: 100%; clear: both; height: 0; line-height: 0; font-size: 0; padding: 0; margin: 0; }
+#header { width: 100%; overflow: hidden; height: 185px; margin-top: 80px; }
+#header_logo { position: relative; width: 800px; margin: 0 auto; overflow: hidden; background: url(/Content/Images/logo.png) top left no-repeat; }
+#header_content { float: right; width: 570px; padding-top: 12px; }
+input[type=submit] { display: block; background: url(/Content/Images/submit.png) no-repeat 0 -64px; border: none; cursor: pointer; height: 32px; width: 145px; overflow: hidden; padding: 0; margin-top: 10px; text-indent: -9999px; }
+input[type=submit]:hover { background-position: 0 -32px; }
+input[type=submit]:focus { background-position: 0 0px; outline: none; }
+input[type=text] { width: 570px; height: 38px; background-color: #f5f6d4; background: url(/Content/Images/input.png) top left no-repeat; border:solid 0 #f5f6d4; font-size: 16px; color:#666666; padding: 8px 0 0 4px; }
+label { position: absolute; left: -9999px; }
+.error { float: right; color: #DB3023; padding-top: 5px; }
+
+#top_border, #bottom_border { width: 814px; margin: 0 auto; height: 18px; z-index: 1; position: relative; }
+#top_border { margin-top: 48px; }
+#bottom_border { overflow: visible; position: relative; z-index: 998; height: 67px; }
+
+#container { width: 814px; margin: 0 auto; overflow: visible; position: relative; z-index: 100; }
+
+#progress, #updates {float: left; position: relative; }
+
+#tweet_bar { width: 247px; float: right;overflow: hidden; position: relative; z-index: 500; }
+#bird { clear: both; position: absolute; top: -28px; left: 552px; z-index: 999; line-height: 8px; padding: 0; margin: 0; }
+.tweet { width: 197px; margin: 0 auto; margin-bottom: 16px; }
+.tweet .posted { display: block; width: 100%; font-family: 'Gill Sans MT', 'Gill Sans', Geneva, Verdana, 'Helvetica Neue', Helvetica, Arial, Calibri, Frutiger, sans-serif; color: #FFF; font-style: italic; font-size: 10px;  line-height: 1.4em; margin: 0; padding-bottom: 6px; }
+.tweet p { font-size: 10px; line-height: 1.4em; margin: 0; padding: 4px 0 8px 0; }
+
+#progress { padding-left: 27px; height: 106px; width: 540px; overflow: hidden; position: relative; z-index: 200; }
+#countdown { width: 376px; margin: 0px auto 0 auto; position: relative; color: #493f0b; position: relative; top: 3px; border: none; background: transparent; }
+.time { width:94px; font-size: 40px; padding-top: 8px; font-weight: bold; float: left; z-index: 800; overflow: visible; }
+.duration {font-size: 10px; position: relative; top: -6px;}
+#bar_container { width: 520px; clear: both; padding-top: 8px; }
+.percentage {font-size: 12px; color:#FFF; font-weight: bold; float: right; padding-right: 6px; }
+
+#updates { overflow: hidden; padding-left: 27px; width: 520px; position: relative; z-index: 200; }
+#updates b {display: block; float: left; width: 80px; margin-top: 1.2em; color: #493f0b;}
+#updates div {float: left; width: 440px; margin-top: 1.2em;}
+#social { position: relative; top: -49px; width: 800px; margin: 12px auto 16px auto; z-index: 9999; }
+#social img {margin-right: 6px;}

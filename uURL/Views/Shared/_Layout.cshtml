@@ -4,9 +4,21 @@
     <title>@ViewBag.Title</title>
     <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
     <script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>
+    <!--[if lt IE 8]><link href="@Url.Content("~/Content/ie7.css")" rel="stylesheet" type="text/css" media="all"><![endif]-->
+    <!--[if lt IE 7]><link href="@Url.Content("~/Content/ie6.css")" rel="stylesheet" type="text/css" media="all"><![endif]-->
+    <script type="text/javascript" src="@Url.Content("~/Scripts/sifr.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/sifr-config.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/autopopulate.js")"></script>
+    <!--[if lt IE 7]><script type="text/javascript" src="@Url.Content("~/Scripts/unitpngfix.js")"></script><![endif]-->
+    <script type="text/javascript" src="@Url.Content("~/Scripts/twitter.js")"></script>
 </head>
-
 <body>
-    @RenderBody()
+    <div id="header">
+        <div id="header_logo">
+            <div id="header_content">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,0 +1,11 @@
+h1 {margin: 0; padding: 0;}
+
+input, label {padding: 0; margin: 0;}
+
+input.email {float: left; margin: -10px 0 4px 0; padding: 0 0 0 3px;}
+
+.duration {position: relative; top: 6px;}
+
+.submit {margin-top: 0;}
+
+#Bird {bottom: -22px;}
