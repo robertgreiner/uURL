@@ -27,9 +27,11 @@ namespace uURL.Controllers {
             ShortUrl shortUrl = new ShortUrl();
             UrlRepository repo = new UrlRepository();
 
-            string shortName = repo.GetShortName(collection["url"]);
+            string url = collection["url"];
 
-            shortUrl.URL = collection["url"];
+            string shortName = repo.GetShortName(url);
+
+            shortUrl.URL = url;
             shortUrl.ShortName = shortName;
             if (string.IsNullOrEmpty(shortName)) {
                 shortUrl.ShortName = repo.GetNewShortName();

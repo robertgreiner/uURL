@@ -6,8 +6,6 @@ using System.Web;
 namespace uURL.Models {
     public class UrlRepository {
 
-        //TODO Handle empty URL
-        //TODO Handle duplicate URL
         public string GetUrl(string shortName) {
             string url = string.Empty;
             using (var ctx = new UrlDataDataContext()) {
@@ -16,7 +14,7 @@ namespace uURL.Models {
                              select row.URL).FirstOrDefault();
             }
 
-            if (url != null && !url.StartsWith("http")) {
+            if (url != null && !url.Contains("://")) {
                 url = @"http://" + url;
             }
 
