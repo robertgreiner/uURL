@@ -20,5 +20,30 @@
             </div>
         </div>
     </div>
+
+    <div id="top_border"></div>
+    <div id="container">
+        <div id="tweet_bar">    
+        </div>
+    
+        <div id="updates">
+        </div>
+    </div>
+    <div class="clear"></div> 
+    <div id="bottom_border">
+    </div>
+
+    <script type="text/javascript" charset="utf-8">
+        getTwitters('tweet_bar', {
+            // ***** Replace 'google' on the line below with your own twitter ID, for example 'snapzu'
+            id: 'robert_greiner',
+            // ***** Set the number of tweets you wish to be displayed
+            count: 3,
+            enableLinks: true,
+            ignoreReplies: true,
+            clearContents: false,
+            template: '<div class="tweet"><p class="posted">%time%<\/p><p><a href="http://twitter.com/%user_screen_name%">%text%<\/a><\/p><\/div>'
+        });
+    </script>
 </body>
 </html>

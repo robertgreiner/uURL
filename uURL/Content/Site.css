@@ -32,8 +32,8 @@ h1 { font-size:2.92em; line-height: normal; /* Equals base line-height (1.6) div
 body { background: url(/Content/Images/background.jpg) repeat; }
 #header { background: url(/Content/Images/bar.jpg); background-repeat: repeat-x; }
 #header_logo { background: url(/Content/Images/logo.png) top left no-repeat; }
-#top_border { background: url(/Content/Images/top_border.png) no-repeat; }
-#bottom_border { background: url(/Content/Images/bottom_border.png) no-repeat; }
+#top_border { background: url(/Content/Images/topborder.png) no-repeat; }
+#bottom_border { background: url(/Content/Images/bottomborder.png) no-repeat; }
 #container { background: url(/Content/Images/containerbg.png) repeat-y; }
 #progress { background: url(/Content/Images/progressbg.png) no-repeat; }
 .ui-widget-content { border: 1px solid #dfdfdf; background: #ffffff; color: #222222; }
