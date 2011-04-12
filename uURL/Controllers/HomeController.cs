@@ -8,9 +8,9 @@ using uURL.Models;
 namespace uURL.Controllers {
     public class HomeController : Controller {
 
-        public ActionResult Index(string id) {
+        public ActionResult Index(string shortName) {
             UrlRepository repo = new UrlRepository();
-            string url = repo.GetUrl(id);
+            string url = repo.GetUrl(shortName);
 
             if (string.IsNullOrEmpty(url)) {
                 return View();
@@ -21,16 +21,20 @@ namespace uURL.Controllers {
 
         [HttpPost]
         public ActionResult Index(FormCollection collection) {
+            
+            //TODO check for valid URL
 
             ShortUrl shortUrl = new ShortUrl();
             UrlRepository repo = new UrlRepository();
 
-            shortUrl.ShortName = repo.GetNewShortName();
+            string shortName = repo.GetShortName(collection["url"]);
+
             shortUrl.URL = collection["url"];
-
-            //TODO check for valid URL
-            repo.SaveUrl(shortUrl);
-
+            shortUrl.ShortName = shortName;
+            if (string.IsNullOrEmpty(shortName)) {
+                shortUrl.ShortName = repo.GetNewShortName();
+                repo.SaveUrl(shortUrl);
+            }
             return View(shortUrl);
         }
 

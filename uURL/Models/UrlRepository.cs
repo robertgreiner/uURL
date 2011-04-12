@@ -23,6 +23,17 @@ namespace uURL.Models {
             return url;
         }
 
+        public string GetShortName(string url) {
+            string shortName = string.Empty;
+            using (var ctx = new UrlDataDataContext()) {
+                shortName = (from row in ctx.uURLs
+                       where row.URL == url
+                       select row.ShortName).FirstOrDefault();
+            }
+
+            return shortName;
+        }
+
         public void SaveUrl(ShortUrl shortUrl) {
             using (var ctx = new UrlDataDataContext()) {
                 uURL url = new uURL();

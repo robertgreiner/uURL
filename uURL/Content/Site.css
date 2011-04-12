@@ -24,6 +24,7 @@ h1, h2, h3, h4, h5 {  }
 h1 {margin-bottom: 10px; padding: 0;}
 h1 em {display: inline;}
 h2 { font-weight: bold; font-size: 1em; line-height: 1.6em; margin-bottom: 1.6em; color: #2a3436; margin: 0;}
+.error_message { color: #770000; font-weight: bold; }
 /* PROPER H1 
 h1 { font-size:2.92em; line-height: normal; /* Equals base line-height (1.6) divided by this font size (2.92)  margin-bottom: 0.55em; color: #603913; }*/
 
