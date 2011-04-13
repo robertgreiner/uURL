@@ -157,7 +157,7 @@ if (typeof renderTwitters != 'function') (function () {
         target.appendChild(ul);
     };
     
-    window.getTwitters = function (target, id, count, options) {
+    window.getTweets = function (target, id, count, options) {
         guid++;
         
 

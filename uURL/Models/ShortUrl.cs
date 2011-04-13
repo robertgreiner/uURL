@@ -9,7 +9,7 @@ namespace uURL.Models {
         public string ShortName { get; set; }
 
         [Required(ErrorMessage = "Please enter a URL.")]
-        [RegularExpression(@"(https?|ftp)?(://)?([-\w\.]+)+(:\d+)?(/([\w/_\.]*(\?\S+)?)?)?", ErrorMessage = "Please enter a valid URL.")]
+        [RegularExpression(@"((http|https|ftp)://)?([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)?", ErrorMessage = "Please enter a valid URL.")]
         public string URL { get; set; }
     }
 }

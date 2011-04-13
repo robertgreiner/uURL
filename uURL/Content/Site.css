@@ -38,7 +38,7 @@ body { background: url(/Content/Images/background.jpg) repeat; }
 #progress { background: url(/Content/Images/progressbg.png) no-repeat; }
 .ui-widget-content { border: 1px solid #dfdfdf; background: #ffffff; color: #222222; }
 .ui-widget-header { border: 1px solid #9db91e; background: #a1be1f url(/Content/Images/bar.png) top left repeat-x; color: #222222; font-weight: bold; }
-.tweet, .tweet .posted { background: url(/Content/Images/tweetborder.png) left bottom repeat-x; }
+.tweet, .tweet .posted { /*background: url(/Content/Images/tweetborder.png) left bottom repeat-x; */ }
 
 /* Layout Elements */
 .clear { width: 100%; clear: both; height: 0; line-height: 0; font-size: 0; padding: 0; margin: 0; }
@@ -58,13 +58,13 @@ label { position: absolute; left: -9999px; }
 
 #container { width: 814px; margin: 0 auto; overflow: visible; position: relative; z-index: 100; }
 
-#progress, #updates {float: left; position: relative; }
+#progress, #faq {float: left; position: relative; }
 
 #tweet_bar { width: 247px; float: right;overflow: hidden; position: relative; z-index: 500; }
 #bird { clear: both; position: absolute; top: -28px; left: 552px; z-index: 999; line-height: 8px; padding: 0; margin: 0; }
-.tweet { width: 197px; margin: 0 auto; margin-bottom: 16px; }
-.tweet .posted { display: block; width: 100%; font-family: 'Gill Sans MT', 'Gill Sans', Geneva, Verdana, 'Helvetica Neue', Helvetica, Arial, Calibri, Frutiger, sans-serif; color: #FFF; font-style: italic; font-size: 10px;  line-height: 1.4em; margin: 0; padding-bottom: 6px; }
-.tweet p { font-size: 10px; line-height: 1.4em; margin: 0; padding: 4px 0 8px 0; }
+.tweet { width: 197px; margin: 0 auto; margin-bottom: 10px; }
+.tweet .posted { display: block; width: 100%; font-family: 'Gill Sans MT', 'Gill Sans', Geneva, Verdana, 'Helvetica Neue', Helvetica, Arial, Calibri, Frutiger, sans-serif; color: #FFF; font-style: italic; font-size: 10px;  line-height: 1.4em; margin: 0; padding-bottom: 3px; }
+.tweet p { font-size: 10px; line-height: 1.2em; margin: 0; padding: 4px 0 8px 0; }
 
 #progress { padding-left: 27px; height: 106px; width: 540px; overflow: hidden; position: relative; z-index: 200; }
 #countdown { width: 376px; margin: 0px auto 0 auto; position: relative; color: #493f0b; position: relative; top: 3px; border: none; background: transparent; }
@@ -73,8 +73,8 @@ label { position: absolute; left: -9999px; }
 #bar_container { width: 520px; clear: both; padding-top: 8px; }
 .percentage {font-size: 12px; color:#FFF; font-weight: bold; float: right; padding-right: 6px; }
 
-#updates { overflow: hidden; padding-left: 27px; width: 520px; position: relative; z-index: 200; }
-#updates b {display: block; float: left; width: 80px; margin-top: 1.2em; color: #493f0b;}
-#updates div {float: left; width: 440px; margin-top: 1.2em;}
-#social { position: relative; top: -49px; width: 800px; margin: 12px auto 16px auto; z-index: 9999; }
-#social img {margin-right: 6px;}
+#faq { overflow: hidden; padding-left: 27px; width: 520px; position: relative; z-index: 200; }
+#faq b {display: block; float: left; width: 80px; margin-top: 1.2em; color: #493f0b;}
+#faq div {float: left; width: 440px; margin-top: 1.2em;}
+#author_info { position: relative; top: -49px; text-align: center; width: 800px; margin: 12px auto 16px auto; z-index: 9999; }
+#author_info img {margin-right: 6px;}

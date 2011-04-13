@@ -96,6 +96,7 @@
     <Content Include="Content\Images\progressbg.png" />
     <Content Include="Content\Images\submit.png" />
     <Content Include="Content\Images\topborder.png" />
+    <Content Include="Content\Images\tweetborder.png" />
     <Content Include="Content\jquery-ui-1.7.2.custom.css" />
     <Content Include="Content\sifr.css" />
     <Content Include="Global.asax" />

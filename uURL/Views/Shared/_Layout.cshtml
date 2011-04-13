@@ -11,6 +11,17 @@
     <script type="text/javascript" src="@Url.Content("~/Scripts/autopopulate.js")"></script>
     <!--[if lt IE 7]><script type="text/javascript" src="@Url.Content("~/Scripts/unitpngfix.js")"></script><![endif]-->
     <script type="text/javascript" src="@Url.Content("~/Scripts/twitter.js")"></script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-10287519-13']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
 </head>
 <body>
     <div id="header">
@@ -26,19 +37,32 @@
         <div id="tweet_bar">    
         </div>
     
-        <div id="updates">
+        <div id="faq">
+            <h2>What is uURL?</h2>
+            <p>uURL (micro-URL) is a URL shortening service.  uURL will take existing URLs that are too long or cumbersome to deal with and shorten them for you.</p>
+
+            <h2>How do I use uURL?</h2>
+            <p>Simple!  Just type or copy/paste a link into the box above and click submit to shorten.  You will be provided with a unique shortened URL that will automatically redirect to your original link.</p>
+
+            <h2>Should I trust shortened URLs?</h2>
+            <p>While not all links posted on the internet are safe, you should be extra cautious of shortened URLs because you can't tell where they are pointing to just by looking at them.  If you would like to know where a shortened URL will take you, you should check out the shortened URL reversal service called <a href="http://wheredoesthislinkgo.com">Where Does This Link Go?</a></p>
         </div>
+
+        <div class="clear"></div> 
     </div>
-    <div class="clear"></div> 
+    
     <div id="bottom_border">
+        <div id="bird"><a href="http://www.twitter.com/robert_greiner" title="Follow me on Twitter"><img src="@Url.Content("~/Content/Images/bird.png")" alt="Click to follow me on twitter" /></a></div>
+    </div>
+
+    <div id="author_info">
+        <p>Created by <a href="http://creatingcode.com">Robert Greiner</a>.  Source available on <a href="http://github.com/robert_greiner/uURL">Github</a>.</p>
     </div>
 
     <script type="text/javascript" charset="utf-8">
-        getTwitters('tweet_bar', {
-            // ***** Replace 'google' on the line below with your own twitter ID, for example 'snapzu'
+        getTweets('tweet_bar', {
             id: 'robert_greiner',
-            // ***** Set the number of tweets you wish to be displayed
-            count: 3,
+            count: 4,
             enableLinks: true,
             ignoreReplies: true,
             clearContents: false,
