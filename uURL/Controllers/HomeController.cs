@@ -37,6 +37,8 @@ namespace uURL.Controllers {
                 shortUrl.ShortName = repo.GetNewShortName();
                 repo.SaveUrl(shortUrl);
             }
+
+            shortUrl.URL = string.Format("http://uurl.co/{0}", shortUrl.ShortName);
             return View(shortUrl);
         }
 
